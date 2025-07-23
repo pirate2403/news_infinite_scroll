@@ -7,9 +7,10 @@ interface Props {
   post: Post;
   style?: CSSProperties;
   registerChild?: (element?: Element | null) => void;
+  rows?: number;
 }
 
-export function PostsCard({ post, registerChild, style }: Props): JSX.Element {
+export function PostsCard({ post, registerChild, style, rows = 3 }: Props): JSX.Element {
   return (
     <Card ref={registerChild} title={post.title} style={style}>
       <Flex gap={14} vertical justify="space-between">
@@ -26,7 +27,7 @@ export function PostsCard({ post, registerChild, style }: Props): JSX.Element {
             </Flex>
           </Flex>
         </Flex>
-        <Typography.Paragraph>{post.body}</Typography.Paragraph>
+        <Typography.Paragraph ellipsis={{rows}}>{post.body}</Typography.Paragraph>
       </Flex>
     </Card>
   );

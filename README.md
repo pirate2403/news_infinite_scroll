@@ -27,3 +27,9 @@
 2. cd news_infinite_scroll
 3. npm install
 4. npm run dev
+
+### Ссылки
+
+1. Ссылка на развернутое приложение: https://news-inifinite-scroll.netlify.app/
+2. Ссылка на репозиторий: https://github.com/pirate2403/news_infinite_scroll
+3. Ссылка на резюме разработчика: https://irkutsk.hh.ru/resume/b903586bff08dd93180039ed1f463158453679
