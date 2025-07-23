@@ -9,7 +9,7 @@ type ListRef = List | null;
 
 const MEASURER_PARAMS: CellMeasurerCacheParams = {
   fixedWidth: true,
-  defaultHeight: 200,
+  defaultHeight: 100,
 };
 
 export function useCellMeasurer(isFetchingData: boolean) {
