@@ -23,7 +23,7 @@
 
 ### Установка
 
-1. git clone https://github.com/alexeykudinov/news-media-holding.git
-2. cd news-media-holding
+1. git clone https://github.com/pirate2403/news_infinite_scroll.git
+2. cd news_infinite_scroll
 3. npm install
 4. npm run dev
