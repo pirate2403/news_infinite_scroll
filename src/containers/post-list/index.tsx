@@ -14,11 +14,11 @@ import { useCellMeasurer } from "./hooks";
 import styles from "./styles.module.css";
 
 const ITEMS_PER_PAGE = 10;
-const LOAD_THRESHOLD = 3;
+const LOAD_THRESHOLD = 5;
 
 export function PostList() {
   const [skip, setSkip] = useState(0);
-  const { data, isFetching, error } = useGetPostsQuery({ skip });
+  const { data, isLoading, isFetching, error } = useGetPostsQuery({ skip });
 
   const { cache, handleRegisterListRef } = useCellMeasurer(isFetching);
   const posts = useMemo(() => data?.posts || [], [data?.posts]);
@@ -33,7 +33,7 @@ export function PostList() {
 
   return (
     <Fragment>
-      <Loader isLoading={isFetching} />
+      <Loader isLoading={isLoading} />
       <ErrorNotification error={error} />
       <InfiniteLoader
         isRowLoaded={isRowLoaded}
